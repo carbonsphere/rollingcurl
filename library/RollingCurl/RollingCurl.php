@@ -17,6 +17,7 @@ class RollingCurlRequest {
 	public $post_data = null;
 	public $headers = null;
 	public $options = null;
+	public $source_index = null;
 
     /**
      * @param string $url
@@ -26,19 +27,20 @@ class RollingCurlRequest {
      * @param  $options
      * @return void
      */
-    function __construct($url, $method = "GET", $post_data = null, $headers = null, $options = null) {
+    function __construct($url, $method = "GET", $post_data = null, $headers = null, $options = null, $source_index=null) {
         $this->url = $url;
         $this->method = $method;
         $this->post_data = $post_data;
         $this->headers = $headers;
         $this->options = $options;
+        $this->source_index = $source_index;
     }
 
     /**
      * @return void
      */
     public function __destruct() {
-        unset($this->url, $this->method, $this->post_data, $this->headers, $this->options);
+        unset($this->url, $this->method, $this->post_data, $this->headers, $this->options, $this->source_index);
     }
 }
 

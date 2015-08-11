@@ -15,11 +15,11 @@
         "classmap": [
             "library/RollingCurl/"
         ]
-    }
+    },
     "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/carbonsphere/rollingcurl.git"
         }
-    ],
+    ]
 }
